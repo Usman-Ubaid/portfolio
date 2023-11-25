@@ -1,18 +1,26 @@
 import Card from "./Card";
+import html from "../../assets/html.svg";
+import css from "../../assets/css.svg";
+import js from "../../assets/js.svg";
+import react from "../../assets/react.svg";
+import redux from "../../assets/redux.svg";
+import ts from "../../assets/ts.svg";
+import node from "../../assets/node.svg";
+import express from "../../assets/express.svg";
 
 const Skills = () => {
   const frontendCardContent = [
-    { id: 1, imgSrc: "../src/assets/html.svg", cardText: "HTML" },
-    { id: 2, imgSrc: "../src/assets/css.svg", cardText: "CSS" },
-    { id: 3, imgSrc: "../src/assets/js.svg", cardText: "JavaScript" },
-    { id: 4, imgSrc: "../src/assets/react.svg", cardText: "ReactJS" },
-    { id: 5, imgSrc: "../src/assets/redux.svg", cardText: "Redux" },
-    { id: 6, imgSrc: "../src/assets/ts.svg", cardText: "TypeScript" },
+    { id: 1, imgSrc: html, cardText: "HTML" },
+    { id: 2, imgSrc: css, cardText: "CSS" },
+    { id: 3, imgSrc: js, cardText: "JavaScript" },
+    { id: 4, imgSrc: react, cardText: "ReactJS" },
+    { id: 5, imgSrc: redux, cardText: "Redux" },
+    { id: 6, imgSrc: ts, cardText: "TypeScript" },
   ];
 
   const backendCardContent = [
-    { id: 1, imgSrc: "../src/assets/node.svg", cardText: "HTML" },
-    { id: 2, imgSrc: "../src/assets/express.svg", cardText: "CSS" },
+    { id: 1, imgSrc: node, cardText: "Node" },
+    { id: 2, imgSrc: express, cardText: "Express" },
   ];
 
   return (

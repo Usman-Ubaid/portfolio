@@ -11,7 +11,7 @@ const CardBody = ({ cardContent }: CardBodyParams) => {
     <div className="card-content">
       {cardContent.map((item) => (
         <div key={item.id} className="card-item">
-          <img src={item.imgSrc} />
+          {item.imgSrc && <img src={item.imgSrc} />}
           <p>{item.cardText}</p>
         </div>
       ))}

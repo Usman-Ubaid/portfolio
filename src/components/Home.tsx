@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import profilePic from "../assets/profile-pic.png";
 
 const Home = () => {
   return (
@@ -36,7 +37,7 @@ const Home = () => {
         </div>
       </div>
       <div className="image-container">
-        <img src="../src/assets/profile-pic.png" alt="my-profile-img" />
+        <img src={profilePic} alt="my-profile-img" />
       </div>
     </section>
   );
