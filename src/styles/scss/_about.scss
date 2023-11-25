@@ -1,0 +1,56 @@
+@import "./colors";
+@import "./mixins";
+
+.about {
+  @include flex-center(center, center, column);
+  text-align: center;
+  min-height: 90vh;
+  padding: 0 9%;
+  background-color: $db-color;
+
+  .about-content {
+    font-size: 1.2rem;
+  }
+}
+
+.about-img {
+  text-align: center;
+  margin: 2rem 0;
+  position: relative;
+  height: 220px;
+  width: 220px;
+
+  img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid $main-color;
+  }
+
+  .circle-spin {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-30%, -35%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: 2px solid $db-color;
+    border-bottom: 2px solid $db-color;
+    border-left: 2px solid $main-color;
+    border-right: 2px solid $main-color;
+    animation: borderSpinner 6s linear infinite;
+  }
+}
+
+@keyframes borderSpinner {
+  100% {
+    transform: translate(-30%, -35%) rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 0 5%;
+  }
+}

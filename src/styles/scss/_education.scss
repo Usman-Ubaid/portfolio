@@ -1,0 +1,107 @@
+@import "./mixins";
+@import "./colors";
+
+.education {
+  @include flex-center(center, center, column);
+  min-height: 90vh;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  .wrapper {
+    @include flex-center(flex-start, space-between, row);
+    column-gap: 5rem;
+
+    .column-box > h3 {
+      font-size: 2rem;
+      padding-left: 1.5rem;
+    }
+  }
+}
+
+.content-box {
+  border-left: 2px solid $main-color;
+}
+
+.content {
+  border: 2px solid $main-color;
+  border-radius: 8px;
+  margin: 1rem 0 1rem 1.5rem;
+  position: relative;
+
+  &::before {
+    content: "";
+    top: -0.2rem;
+    left: -2.25rem;
+    position: absolute;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background: $main-color;
+  }
+
+  h3 {
+    margin: 0.3rem 0;
+    font-size: 1.2rem;
+  }
+}
+
+.content-card {
+  padding: 1rem;
+  position: relative;
+  border-radius: 8px;
+
+  ul {
+    margin-left: 2rem;
+    list-style-type: disc;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 7px;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: $db-color;
+    transition: 0.5s;
+    z-index: -1;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+
+  .year {
+    @include flex-center(center, flex-start, row);
+
+    .bxs-calendar {
+      color: $main-color;
+    }
+
+    p {
+      time {
+        color: $main-color;
+      }
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  .education {
+    margin: 3rem 0;
+    .wrapper {
+      display: block;
+
+      > .column-box:first-child {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .education {
+    padding: 0 5%;
+  }
+}

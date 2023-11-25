@@ -1,0 +1,21 @@
+@import "./global.scss";
+@import "./colors";
+@import "./header";
+@import "./home";
+@import "./about";
+@import "./education";
+@import "./skills";
+@import "./projects";
+@import "./footer";
+
+@media (max-width: 1280px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 78%;
+  }
+}

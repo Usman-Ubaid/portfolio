@@ -1,0 +1,135 @@
+@import "./mixins";
+@import "./colors";
+
+.home {
+  @include flex-center(center, space-between, row);
+  min-height: 100vh;
+
+  .intro-container {
+    width: 50%;
+    margin-right: 2rem;
+
+    h1 {
+      font-size: 3.3rem;
+      font-weight: 700;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 1rem 0 3rem 0;
+
+      span {
+        font-size: 1.4rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px $main-color;
+        background-image: linear-gradient($main-color, $main-color);
+        background-repeat: no-repeat;
+        -webkit-background-clip: text;
+        background-position: -36rem 0;
+        animation: solidText 8s linear infinite;
+        animation-delay: 0.5s;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .intro-container {
+      width: 55%;
+      h1 {
+        font-size: 2.7rem;
+      }
+    }
+  }
+
+  @media (max-width: 820px) {
+    .intro-container {
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+
+      .social-links {
+        @include flex-center(center, center, row);
+      }
+    }
+    .image-container {
+      display: none;
+    }
+  }
+}
+
+.social-links {
+  @include flex-center(center, flex-start, row);
+  gap: 2rem;
+
+  a {
+    position: relative;
+    border: 2px solid $main-color;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    text-align: center;
+
+    svg {
+      position: absolute;
+      height: 35px;
+      width: 35px;
+      top: 20%;
+      left: 20%;
+      z-index: 10;
+      transition: color 0.5s;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $main-color;
+      width: 0;
+      height: 100%;
+      transition: 0.5s;
+    }
+
+    @media (min-width: 769px) {
+      &:hover::before {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.image-container {
+  @include flex-center(center, flex-end, row);
+
+  img {
+    height: auto;
+    width: 350px;
+    border: 2px solid $main-color;
+    border-radius: 50%;
+
+    @media (max-width: 1080px) {
+      width: 280px;
+    }
+
+    @media (max-width: 960px) {
+      width: 240px;
+    }
+  }
+}
+
+@keyframes solidText {
+  0%,
+  15%,
+  100% {
+    background-position: -45rem 0;
+  }
+  60%,
+  80% {
+    background-position: 0 0;
+  }
+}

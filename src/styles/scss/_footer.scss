@@ -1,0 +1,14 @@
+@import "./colors";
+
+.footer {
+  padding: 3rem 8rem;
+  background-color: $db-color;
+
+  div {
+    text-align: center;
+
+    p {
+      margin-bottom: 12px;
+    }
+  }
+}

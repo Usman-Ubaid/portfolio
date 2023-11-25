@@ -1,0 +1,91 @@
+@import "./mixins";
+
+.header {
+  @include flex-center(center, space-between, row);
+  letter-spacing: 1px;
+  padding-top: 1rem;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+  // z-index: 20;
+  // background-color: transparent;
+  // transition: background-color 0.6s;
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 0;
+    font-weight: 600;
+    span {
+      color: $main-color;
+    }
+  }
+
+  .nav-list {
+    @include flex-center(center, space-between, row);
+    gap: 2.5rem;
+    font-weight: 500;
+  }
+
+  // .active {
+  //   color: $main-color;
+  // }
+
+  .bx-menu {
+    font-size: 3rem;
+    cursor: pointer;
+    color: $text-color;
+    display: none;
+  }
+}
+
+// Change navbar background color when scrolling
+.navbar-bg {
+  background-color: $db-color;
+  border-bottom: 2px solid rgb(159, 191, 214);
+}
+
+@media (max-width: 820px) {
+  .header {
+    .menu-logo {
+      @include flex-center(center, space-between, row);
+      width: 100%;
+
+      .bx-menu {
+        display: block;
+      }
+    }
+
+    .nav-list {
+      border-top: 2px solid $main-color;
+      display: block;
+      background-color: $bg-color;
+      position: absolute;
+      padding: 0 9%;
+      top: 100%;
+      left: -100%;
+      width: 100%;
+      transition: 0.25s ease;
+      transition-delay: 0.15s;
+
+      a {
+        display: block;
+        margin-top: 2.5rem;
+        font-size: 1rem;
+        font-size: 1.5rem;
+
+        &:last-child {
+          margin-bottom: 2.5rem;
+        }
+      }
+    }
+    .active {
+      left: 0;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 0.4rem 5%;
+  }
+}

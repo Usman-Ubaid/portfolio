@@ -1,0 +1,61 @@
+@import "./colors";
+@import "./mixins";
+
+.skills {
+  background-color: $db-color;
+  @include flex-center(center, center, column);
+  min-height: 70vh;
+
+  @media (max-width: 920px) {
+    min-height: 80vh;
+  }
+
+  .card-wrapper {
+    @include flex-center(center, space-around, row);
+    width: 100%;
+
+    @media (max-width: 920px) {
+      @include flex-center(center, center, column);
+      gap: 3rem;
+    }
+
+    .card {
+      @include flex-center(center, center, column);
+      position: relative;
+      padding: 10px 1.5rem;
+      box-shadow: 4px 4px 10px $bg-color, -4px -4px 10px $bg-color;
+      width: 300px;
+      border: 1px solid $main-color;
+      border-radius: 10px;
+
+      .card-header {
+        margin-bottom: 0.5rem;
+      }
+
+      .card-content {
+        @include flex-center(center, center, row);
+        gap: 1rem;
+        flex-wrap: wrap;
+
+        .card-item {
+          @include flex-center(center, center, row);
+          border: 2px solid #f2f3f480;
+          border-radius: 10px;
+          padding: 10px 15px;
+          gap: 0.3rem;
+          scale: 1;
+          transition: 0.3s scale ease-in-out;
+
+          &:hover {
+            scale: 1.15;
+          }
+        }
+
+        img {
+          width: 20px;
+          height: 22px;
+        }
+      }
+    }
+  }
+}

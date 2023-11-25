@@ -1,0 +1,88 @@
+@import "./colors";
+@import "./mixins";
+
+.projects {
+  @include flex-center(center, center, column);
+  padding: 0 9%;
+
+  .projects-wrapper {
+    @include flex-center(center, space-between, row);
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 2rem;
+
+    .project-box {
+      position: relative;
+
+      img {
+        width: 300px;
+        height: 300px;
+        border-radius: 6px;
+      }
+
+      .project-content {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 2rem;
+        opacity: 0;
+        transition: 0.3s;
+
+        &:hover {
+          opacity: 1;
+          background: linear-gradient(rgba(0, 0, 0, 0.6), $main-color);
+          border-radius: 6px;
+        }
+
+        p {
+          font-size: 1.2rem;
+          margin: 0.8rem 0;
+        }
+
+        .bx {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .projects {
+    padding: 9% 9%;
+
+    .projects-wrapper {
+      .project-box {
+        img {
+          width: 250px;
+          height: 250px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .projects {
+    .projects-wrapper {
+      @include flex-center(center, space-around, row);
+      gap: 5rem;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .projects {
+    .projects-wrapper {
+      .project-box {
+        img {
+          width: 200px;
+          height: 200px;
+        }
+      }
+    }
+  }
+}
