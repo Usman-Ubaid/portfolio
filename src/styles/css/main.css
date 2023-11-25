@@ -309,13 +309,13 @@ span {
   }
 }
 .education {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   min-height: 90vh;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.education .heading {
+  display: block;
+  text-align: center;
 }
 .education .wrapper {
   display: flex;
@@ -425,16 +425,9 @@ span {
   align-items: center;
   justify-content: space-around;
   flex-direction: row;
-  width: 100%;
-}
-@media (max-width: 920px) {
-  .skills .card-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 3rem;
-  }
+  flex-wrap: wrap;
+  width: 80%;
+  gap: 3rem;
 }
 .skills .card-wrapper .card {
   display: flex;
@@ -496,17 +489,24 @@ span {
   width: 100%;
 }
 .projects .project-box {
-  width: 330px;
+  width: 310px;
   height: 480px;
   border: 2px solid #00abf0;
   margin: 0 1.5rem 1.5rem 1.5rem;
   padding: 1rem;
   border-radius: 10px;
+  scale: 1;
+  transition: scale 0.5s ease-in-out;
+  box-shadow: 4px 4px 10px #112e42, -4px -4px 10px #112e42;
+}
+.projects .project-box:hover {
+  box-shadow: none;
+  scale: 1.05;
 }
 .projects .project-box img {
   display: block;
   margin: auto;
-  width: 300px;
+  width: 280px;
   height: 220px;
   border-radius: 5px;
 }

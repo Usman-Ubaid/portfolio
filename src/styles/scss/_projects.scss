@@ -13,17 +13,25 @@
   }
 
   .project-box {
-    width: 330px;
+    width: 310px;
     height: 480px;
     border: 2px solid $main-color;
     margin: 0 1.5rem 1.5rem 1.5rem;
     padding: 1rem;
     border-radius: 10px;
+    scale: 1;
+    transition: scale 0.5s ease-in-out;
+    box-shadow: 4px 4px 10px $db-color, -4px -4px 10px $db-color;
+
+    &:hover {
+      box-shadow: none;
+      scale: 1.05;
+    }
 
     img {
       display: block;
       margin: auto;
-      width: 300px;
+      width: 280px;
       height: 220px;
       border-radius: 5px;
     }

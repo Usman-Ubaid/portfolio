@@ -5,13 +5,12 @@ const Education = () => {
         My <span>Journey</span>
       </h2>
       <div className="wrapper">
-        <div className="column-box">
+        <div className="left">
           <h3>Experience</h3>
           <div className="content-box">
             <div className="content">
               <div className="content-card">
                 <div className="year">
-                  <i className="bx bxs-calendar"></i>
                   <p>
                     <time dateTime="2023-04-26/2023-06-27">
                       Apr 2023 - June 2023
@@ -35,13 +34,12 @@ const Education = () => {
           </div>
         </div>
 
-        <div className="column-box">
+        <div className="right">
           <h3>Education</h3>
           <div className="content-box">
             <div className="content">
               <div className="content-card">
                 <div className="year">
-                  <i className="bx bxs-calendar"></i>
                   <p>
                     <time dateTime="2022-09-20/2023-02-12">
                       Sep 2023 - Feb 2023
@@ -69,7 +67,6 @@ const Education = () => {
             <div className="content">
               <div className="content-card">
                 <div className="year">
-                  <i className="bx bxs-calendar"></i>
                   <p>
                     <time dateTime="2021-10-20/Present">
                       Oct 2021 - Present
@@ -82,7 +79,6 @@ const Education = () => {
             <div className="content">
               <div className="content-card">
                 <div className="year">
-                  <i className="bx bxs-calendar"></i>
                   <p>
                     <time dateTime="2021-10-20/Present">
                       Sep 2016 - July 2020

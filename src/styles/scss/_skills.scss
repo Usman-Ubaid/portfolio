@@ -12,12 +12,9 @@
 
   .card-wrapper {
     @include flex-center(center, space-around, row);
-    width: 100%;
-
-    @media (max-width: 920px) {
-      @include flex-center(center, center, column);
-      gap: 3rem;
-    }
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 3rem;
 
     .card {
       @include flex-center(center, center, column);
