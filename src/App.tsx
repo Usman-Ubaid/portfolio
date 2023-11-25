@@ -5,12 +5,10 @@ import Education from "./components/Education";
 import Skills from "./components/skillsSection/Skills";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
-import Routers from "./routes/Routers";
 
 function App() {
   return (
     <div>
-      <Routers />
       <Header />
       <Home />
       <div className="divider"></div>
