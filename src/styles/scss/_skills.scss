@@ -2,7 +2,6 @@
 @import "./mixins";
 
 .skills {
-  background-color: $db-color;
   @include flex-center(center, center, column);
   min-height: 70vh;
 

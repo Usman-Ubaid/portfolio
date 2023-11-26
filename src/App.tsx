@@ -12,11 +12,11 @@ function App() {
       <Header />
       <Home />
       <div className="divider"></div>
-      <Education />
+      <Projects />
       <div className="divider"></div>
       <Skills />
       <div className="divider"></div>
-      <Projects />
+      <Education />
       <div className="divider"></div>
       <Footer />
     </div>
