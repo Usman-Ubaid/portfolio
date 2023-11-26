@@ -6,13 +6,13 @@
   min-height: 70vh;
 
   @media (max-width: 920px) {
-    min-height: 80vh;
+    min-height: 90vh;
   }
 
   .card-wrapper {
-    @include flex-center(center, space-around, row);
+    @include flex-center(center, center, row);
     flex-wrap: wrap;
-    width: 80%;
+    width: 100%;
     gap: 3rem;
 
     .card {

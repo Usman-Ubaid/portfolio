@@ -8,7 +8,6 @@ const Home = () => {
         <h1>
           Hi, I'm <span>Usman Ubaid</span>
         </h1>
-        {/* <h3>Frontend Engineer</h3> */}
         <p>
           A <span>Frontend Engineer</span> dedicated to learning JavaScript and
           its frameworks. My journey into web development began after completing
