@@ -2,8 +2,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div>
-        <p>UsmanUbaid@2023</p>
-        <p>Template design inspired by @Codehal</p>
+        <p>&copy; UsmanUbaid 2023.</p>
       </div>
     </footer>
   );
